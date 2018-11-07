@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Spinner
+        android:id="@+id/area_edit_tv"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:prompt="@string/area_prompt"
+        android:spinnerMode="dialog" />
+    <Spinner
+        android:id="@+id/pharmacy_edit_tv"
+        android:layout_weight="1"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:prompt="@string/pharmacy_prompt"
+        android:spinnerMode="dialog" />
+
+</LinearLayout>

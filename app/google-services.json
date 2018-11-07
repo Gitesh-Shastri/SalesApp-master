@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "558427235369",
+    "firebase_url": "https://sales-app-4305e.firebaseio.com",
+    "project_id": "sales-app-4305e",
+    "storage_bucket": "sales-app-4305e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558427235369:android:e01618773125e699",
+        "android_client_info": {
+          "package_name": "com.medicento.salesappmedicento"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "558427235369-f3m27o1tnp3pnnhsru0aao4to3807mh6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.medicento.salesappmedicento",
+            "certificate_hash": "4b9835718f6ef24ddfed9e06abc35dd3a323f2fe"
+          }
+        },
+        {
+          "client_id": "558427235369-ulafikk9l0ej6th39df52asu5ob8q1jk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2NgxxyBqHndwr51d24lMyfnEMNxggiJg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "558427235369-ulafikk9l0ej6th39df52asu5ob8q1jk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

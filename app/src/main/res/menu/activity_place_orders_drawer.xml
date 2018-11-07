@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/sign_out"
+            android:icon="@drawable/ic_exit_to_app_black_48dp"
+            android:title="Sign Out" />
+        <item
+            android:id="@+id/total_sales"
+            android:icon="@drawable/ic_assessment_black_24dp"
+            android:title="" />
+        <item
+            android:id="@+id/no_of_orders"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="" />
+        <item
+            android:id="@+id/returns"
+            android:icon="@drawable/ic_compare_arrows_black_24dp"
+            android:title="" />
+        <item
+            android:id="@+id/earnings"
+            android:icon="@drawable/ic_monetization_on_black_48dp"
+            android:title="" />
+        <item android:id="@+id/recentorders"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="Recent Order" />
+    </group>
+
+    <item android:title="Misc">
+        <menu>
+            <item
+                android:id="@+id/add_new_pharmacy"
+                android:icon="@drawable/ic_local_pharmacy_black_24dp"
+                android:title="Add new pharmacy" />
+            <item
+                android:id="@+id/add_new_area"
+                android:icon="@drawable/ic_location_on_black_24dp"
+                android:title="Add new area" />
+
+            <item
+                android:id="@+id/about_me"
+                android:icon="@drawable/ic_person_black_24dp"
+                android:title="About me"/>
+        </menu>
+    </item>
+
+</menu>

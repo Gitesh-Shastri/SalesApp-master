@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".fragments.PlaceOrderFragment">
+
+        <LinearLayout
+            android:id="@+id/spinner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/border"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/area_edit_tv"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/area_prompt"
+                android:spinnerMode="dialog" />
+
+            <Spinner
+                android:id="@+id/pharmacy_edit_tv"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/pharmacy_prompt"
+                android:spinnerMode="dialog" />
+
+        </LinearLayout>
+
+        <AutoCompleteTextView
+            android:id="@+id/medicine_edit_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner_layout"
+            android:enabled="false"
+            android:hint="Enter Medicine"
+            android:inputType="textPhonetic"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear"
+            android:orientation="vertical"
+            android:layout_below="@+id/medicine_edit_tv">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/addmore"
+                android:text="Add More"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/order_list_label"
+            style="@style/Base.TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear"
+            android:layout_margin="4dp"
+            android:text="Order List"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_alignParentEnd="true"
+            android:padding="8dp"
+            android:id="@+id/cost_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Total :"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="UnknownId" />
+
+            <ImageView
+                android:id="@+id/rupee_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tv2"
+                android:src="@drawable/ic_rupee_symbol" />
+
+            <TextView
+                android:id="@+id/total_cost"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/rupee_img"
+                android:text="0"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ordered_medicines_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/order_list_label" />
+
+        <View
+            android:id="@+id/loading_wait_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#42000000"
+            android:clickable="false" />
+
+        <ImageView
+            android:id="@+id/medicento_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            tool:srcCompat="@drawable/mdlf" />
+    </RelativeLayout>
+
+</ScrollView>

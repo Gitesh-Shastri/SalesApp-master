@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/expensePane"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_marginStart="4dp"
+        android:id="@+id/medicine_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Base.TextAppearance.AppCompat"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        tools:text="Medicine" />
+
+    <TextView
+        android:layout_marginStart="4dp"
+        android:id="@+id/medicine_company"
+        style="@style/Base.TextAppearance.AppCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorRedDark"
+        android:layout_below="@+id/medicine_name"
+        tools:text="Company" />
+    <TextView
+        android:id="@+id/medicine_qty"
+        style="@style/Base.TextAppearance.AppCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/rupee_symbol"
+        tools:text="123" />
+
+    <TextView
+        style="@style/Base.TextAppearance.AppCompat"
+        android:layout_toRightOf="@+id/medicine_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/medicine_qty"
+        android:text="Qty:" />
+
+    <ImageView
+        android:id="@+id/rupee_symbol"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/medicine_cost"
+        android:background="@drawable/ic_rupee_symbol" />
+
+    <TextView
+        android:textColor="@color/colorGreen"
+        android:id="@+id/medicine_cost"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        tools:text="123"
+        android:layout_marginEnd="8dp"/>
+
+</RelativeLayout>

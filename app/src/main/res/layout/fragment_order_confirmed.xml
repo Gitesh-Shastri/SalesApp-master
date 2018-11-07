@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".fragments.OrderConfirmed">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/congo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Congratulations"
+            android:textColor="#FF0000"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/congo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/congo"
+            android:text="Your ordered has been placed with below details:"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/order_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/congo1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/pharmacy"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:text="Selected Phamracy:"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/selected_pharmacy_tv"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/pharmacy"
+                android:text="Pharmacy Name"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_above="@id/order_id_tv"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/order_id_label"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/selected_pharmacy_tv"
+                android:paddingStart="8dp"
+                android:text="Order Id:              "
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/order_id_tv"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/selected_pharmacy_tv"
+                android:layout_marginEnd="8dp"
+                android:layout_toRightOf="@id/order_id_label"
+                android:text="1234"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/order_cost_label"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/order_id_tv"
+                android:paddingStart="8dp"
+                android:text="Total cost:           "
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/order_id_tv"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/total_cost_tv"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/order_id_tv"
+                android:layout_marginEnd="8dp"
+                android:layout_toRightOf="@id/order_cost_label"
+                android:text="9999"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/total_cost_tv"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/delivery_date_label"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total_cost_tv"
+                android:paddingStart="8dp"
+                android:text="Delivery Date:      "
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/delivery_date_tv"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_cost_tv"
+                android:layout_marginEnd="8dp"
+                android:layout_toEndOf="@id/delivery_date_label"
+                android:text="22 22 2078"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/delivery_date_tv"
+                android:background="?android:attr/listDivider" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/share_order_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_box"
+
+            android:layout_margin="10dp"
+            android:background="@drawable/border_curved"
+            android:padding="4dp"
+            android:text="Share Order"
+            android:textColor="#ffffff" />
+
+
+        <Button
+            android:id="@+id/neworder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/share_order_btn"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/border_curved"
+            android:padding="4dp"
+            android:text="New Order"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="172dp"
+        android:background="#ffffff"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/order_details_label"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:text="Order Details"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/order_confirmed_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/order_details_label" />
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

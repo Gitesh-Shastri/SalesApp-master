@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:id="@+id/expensePane"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:padding="6dp"
+    android:background="@drawable/border"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_marginStart="6dp"
+        android:id="@+id/medicine_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Base.TextAppearance.AppCompat"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        tools:text="Medicine" />
+
+    <TextView
+        android:layout_marginStart="6dp"
+        android:id="@+id/medicine_company"
+        style="@style/Base.TextAppearance.AppCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorRedDark"
+        android:layout_below="@+id/medicine_name"
+        tools:text="Company" />
+
+
+    <TextView
+        android:layout_marginStart="6dp"
+        android:id="@+id/medicine_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medicine_company"
+        android:text="Mrp. "/>
+
+    <TextView
+        android:textColor="@color/colorGreen"
+        android:id="@+id/medicine_mrp"
+        android:layout_below="@+id/medicine_company"
+        android:layout_toEndOf="@+id/rupee_symbol"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5dp"
+        tools:text="123"/>
+    <TextView
+        android:id="@+id/rupee_symbol"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medicine_rate"
+        tools:text="Billing Rate: "/>
+
+
+    <TextView
+        android:textColor="@color/colorGreen"
+        android:id="@+id/medicine_cost"
+        android:layout_below="@+id/medicine_rate"
+        android:layout_toEndOf="@+id/rupee_symbol"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="123"/>
+
+    <LinearLayout
+        android:layout_marginEnd="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true">
+        <TextView
+            android:id="@+id/inc_qty"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textAlignment="center"
+            android:background="@drawable/border_curved"
+            android:clickable="true"
+            android:textColor="@android:color/white"
+            style="@style/Base.TextAppearance.AppCompat.Large"/>
+        <TextView
+            android:id="@+id/medicine_qty"
+            android:layout_width="50dp"
+            android:background="@drawable/border"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            style="@style/Base.TextAppearance.AppCompat.Large"
+            android:text="999"/>
+        <TextView
+            android:id="@+id/dec_qty"
+            android:layout_width="40dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="-"
+            style="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white"
+            android:background="@drawable/border_curved"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
+</RelativeLayout>
